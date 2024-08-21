@@ -14,7 +14,11 @@ body {
 
 .container {
     background-color: #d1d1d1;
-    width: 500px;
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     padding: 20px;
     margin: 100px auto 0;
@@ -33,14 +37,16 @@ body {
     border: none;
     border-radius: 5px;
     height: 40px;
+    width: 165px;
     background-color: #a25660;
     color: #f6ebeb;
     font-size: 17px;
     padding: 0 15px;
     float: right;
     cursor: pointer;
-    font-weight: 600;
-    letter-spacing: 0.5px
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
 }
 
 .button-add-task:hover {
@@ -52,7 +58,7 @@ body {
 }
 
 .list-tasks {
-    width: 100%;
+    width: 50%;
     list-style: none;
     margin-top: 30px;
 }
@@ -61,9 +67,11 @@ body {
     background-color: #F2F2F2;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     height: 50px;
+    width: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 15px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -72,12 +80,10 @@ body {
 
 img {
     height: 25px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.task:hover img {
     opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .done {
@@ -85,19 +91,15 @@ img {
     text-decoration: line-through;
 }
 
-@media (max-width: 450px) {
- 
- .container {
-    width: 400px;
-    display: flex;
- }
+@media (max-width: 1254px) {
+    .container {
+        width: auto;
+    }
 
- .button-add-task {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 37%;
- }
+    .task {
+        padding: 0
+    }
+    
 }
 
 
